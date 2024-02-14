@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import {Container} from "../components/index.js"
 
 function Home() {
-  const textArr = ["Hello, I am Mohit Maulekhi.","A full stack web developer.","Tech Entusiast."]
+  const textArr = ["Hello, I am Mohit Maulekhi.","A full stack web developer.","Tech Enthusiast."]
   const [txt,setTxt] = useState("")
   const [maintxt,mainSetTxt] = useState("")
   const [i,setI] = useState(0)
