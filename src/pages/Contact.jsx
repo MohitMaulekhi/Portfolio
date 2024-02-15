@@ -30,7 +30,7 @@ function Contact() {
                 <div className="mb-[0.5vh]"><label htmlFor="email">Your E-mail</label></div>
                 <div className="mb-[2vh]"><input className="w-[35vw] max-w-80 p-1" type="email" id="email" value={email} onChange={(e)=>{setEmail(e.target.value)}} placeholder="Type your email" /></div>
                 <div className="mb-[0.5vh]"><label htmlFor="message"> Message</label></div>
-                <textarea className="w-[35vw] max-w-80 max-h-[25vh] text-black p-1" id="message" value={message} onChange={(e)=>{setMessage(e.target.value)}}  placeholder="Type your message here"></textarea>
+                <textarea className="w-[35vw] max-w-80 max-h-[20vh] h-[20vh] text-black p-1" id="message" value={message} onChange={(e)=>{setMessage(e.target.value)}}  placeholder="Type your message here"></textarea>
               </form>
               <button className="mt-[2vh]" id = "submitButton">Submit</button>
           </div>
