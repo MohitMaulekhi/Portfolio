@@ -42,7 +42,7 @@ function Home() {
   return (
     <Container element = {
       <>
-      <div className="h-[40vmin] mt-[15vh] w-[40vmin] bg-white rounded-full bg-cover" style={{backgroundImage:"url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSBWDHXtjeMDRl3z5YaKUq2DDvEvDTtpYWCetNU006z9NzYXlH8)"}}></div>
+      <div className="h-[40vmin] mt-[15vh] w-[40vmin] rounded-full bg-cover border-4 border-black" style={{backgroundImage:"url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSBWDHXtjeMDRl3z5YaKUq2DDvEvDTtpYWCetNU006z9NzYXlH8)"}}></div>
       <div className="text-blue-800 font-serif font-bold text-[5vmin]  mt-[3vh]">{maintxt}</div>
       </>
     }
