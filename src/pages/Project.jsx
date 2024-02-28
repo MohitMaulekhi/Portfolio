@@ -21,14 +21,14 @@ function Project() {
         }}
         navigation={true}
         modules={[Parallax, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper bg-black h-[70vh] mt-[10vh]"
       >
         <SwiperSlide>
           <ProjectContaner/>
         </SwiperSlide>
       </Swiper>
     }
-     />
+    properties = {""} />
   )
 }
 
