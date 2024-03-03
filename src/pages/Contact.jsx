@@ -1,12 +1,16 @@
-import {useState } from "react"
 import {Container} from "../components/index.js"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faGoogle, faInstagram, faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons"
+import {object,string} from 'yup'
+import { Formik } from "formik"
+
+let contactFormSchema = object({
+  name: string().required("Name field is required"),
+  email: string().required("Email field is required").email("must be a valid email"),
+  message: string()
+})
 
 function Contact() {
-  const [name,setName] = useState("")
-  const [email,setEmail] = useState("")
-  const [message,setMessage] = useState("")
   return (
       
       <Container element = {
@@ -22,15 +26,63 @@ function Contact() {
 
 
           <div className="mt-[15vh] flex flex-col items-center"> 
-              <form>
-                <div className="mb-[0.5vh]"><label htmlFor="name">Your Name</label></div>
-                <div className="mb-[2vh]"><input className="w-[35vw] max-w-80 text-black p-1 border-2 border-black"  type="text" id="name" value={name} onChange={(e)=>{setName(e.target.value)}} placeholder="Type your name" /></div>
-                <div className="mb-[0.5vh]"><label htmlFor="email">Your E-mail</label></div>
-                <div className="mb-[2vh]"><input className="w-[35vw] max-w-80 p-1 border-2 border-black" type="email" id="email" value={email} onChange={(e)=>{setEmail(e.target.value)}} placeholder="Type your email" /></div>
-                <div className="mb-[0.5vh]"><label htmlFor="message"> Message</label></div>
-                <textarea className="w-[35vw] max-w-80 max-h-[20vh] h-[20vh] text-black p-1 border-2 border-black" id="message" value={message} onChange={(e)=>{setMessage(e.target.value)}}  placeholder="Type your message here"></textarea>
+            <Formik
+              initialValues={{
+                name:'',
+                email:'',
+                message:'',
+              }}
+              validationSchema={contactFormSchema}
+              onSubmit={(values,action)=>{
+                action.resetForm()
+                console.log(values)
+              }}
+            >
+              {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
+                handleSubmit
+              })=>(
+                <form onSubmit={handleSubmit}>
+                <label className=" block" htmlFor="name">Your Name</label>
+                <input className="w-[35vw] max-w-80 text-black p-1 border-2 border-black block"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Type your name"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.name}
+                   />
+                   {errors.name && touched.name && <span className="text-red-600 text-xs italic">**{errors.name}</span>}
+                <label className="block" htmlFor="email">Your E-mail</label>
+                <input className="w-[35vw] max-w-80 text-black p-1 border-2 border-black block"
+                 type="email" 
+                 name="email"
+                 id="email" 
+                 placeholder="Type your email"
+                 onBlur={handleBlur}
+                 onChange={handleChange}
+                 value={values.email} 
+                 />
+                 {errors.email && touched.email && <span className="text-red-600 text-xs italic">**{errors.email}</span>}
+                <label className="block" htmlFor="message"> Message</label>
+                <textarea className="w-[35vw] max-w-80 max-h-[20vh] h-[20vh] block text-black p-1 border-2 border-black" 
+                id="message" 
+                placeholder="Type your message here"
+                name="message"
+                onChange={handleChange}
+                 value={values.message} 
+                ></textarea>
+                <button className="mt-[2vh]" type="submit" id = "submitButton">Submit</button>
               </form>
-              <button className="mt-[2vh]" id = "submitButton">Submit</button>
+              )}
+              
+            </Formik>
+              
           </div>
           </>
       }

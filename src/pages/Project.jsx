@@ -21,9 +21,12 @@ function Project() {
         }}
         navigation={true}
         modules={[Parallax, Pagination, Navigation]}
-        className="mySwiper bg-black h-[70vh] mt-[10vh]"
+        className="mySwiper h-[70vh] mt-[7.5vh] w-[100vw] bg-slate-400  bg-opacity-35 rounded-3xl mx-4"
       >
-        <SwiperSlide>
+        <SwiperSlide className="flex justify-center items-center">
+          <ProjectContaner/>
+        </SwiperSlide>
+        <SwiperSlide className="flex justify-center items-center">
           <ProjectContaner/>
         </SwiperSlide>
       </Swiper>
