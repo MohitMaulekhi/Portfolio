@@ -16,7 +16,7 @@ function Navbar() {
   return (
     <nav className={`flex flex-wrap px-[1vw] py-[1vh] items-center justify-between ${theme == "dark"?"bg-black text-white":"bg-slate-200"}  h-fit`}>
       <div id = "navtext" className="">Mohit Maulekhi</div>
-      <div className="flex font-semibold flex-wrap font-serif my-[0.5vh]" >
+      <div className="flex font-bold flex-wrap  my-[0.5vh]" >
       <NavLink className={({isActive})=>(`px-[1.5vw] rounded-2xl  text-[2.5vmin]  ${thememode(isActive)}`)} to={""} >Home</NavLink>
       <NavLink className={({isActive})=>(`px-[1.5vw] rounded-2xl  text-[2.5vmin]  ${thememode(isActive)}`)} to={"/about"}>About</NavLink>
       <NavLink className={({isActive})=>(`px-[1.5vw] rounded-2xl  text-[2.5vmin]  ${thememode(isActive)}`)} to={"/skills"}>Skills</NavLink>

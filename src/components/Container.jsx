@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { ThemeContext } from "../Utilities/Context"
-
+import {PropTypes} from 'prop-types'
 function Container(props) {
   const theme =  useContext(ThemeContext)
   return (
@@ -9,5 +9,9 @@ function Container(props) {
     </div>
   )
 }
+Container.propTypes = {
+  properties:PropTypes.string,
+  element:PropTypes.element
 
+}
 export default Container

@@ -18,10 +18,9 @@ function About() {
           </div>
         </div>
         <div className={`${theme=='dark'?"bg-white":"bg-black"}  w-[2vw] max-w-0.5`}></div>
-        <div className="max-w-[50vw]  bg-slate-400 bg-opacity-35 rounded-3xl flex flex-col justify-start  p-6 text-[2.5vmin]"  style={{fontFamily: "Ubuntu"}}>
-          <p> I am pursuing software engineer from Netaji Subhas University of Technology. I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. I have been learning web development for a year now while studying at the university and I have manage to gain a decent amount of experience and valuable knowledge from all different kinds of fields throughout my projects/work.</p>
-
-          <p> I have also a great interest in Data structures and algorithms. I have completed moe than 200 questions in Gekks for Geeks and completed more than 70 questions in Leetcode.</p>
+        <div className="max-w-[50vw]  bg-slate-400 bg-opacity-35 rounded-3xl pt-[2vw] p-4  sm:text-[2.25vmin] text-[2.75vmin]"  style={{fontFamily: "Ubuntu"}}>
+          <p className="m-[1vh]"> I am pursuing software engineer from Netaji Subhas University of Technology. I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. I have been learning web development for a year now while studying at the university and I have manage to gain a decent amount of experience and valuable knowledge from all different kinds of fields throughout my projects/work.</p>
+          <p className="m-[1vh]"> I have also a great interest in Data structures and algorithms. I have completed moe than 200 questions in Gekks for Geeks and completed more than 70 questions in Leetcode.</p>
         </div>
       </div>
     }

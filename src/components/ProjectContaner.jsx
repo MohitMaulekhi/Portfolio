@@ -1,14 +1,30 @@
-function ProjectContaner() {
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faLink } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {PropTypes} from 'prop-types'
+function ProjectContaner({imgUrl,content,techStack,gitURL,link}) {
   return (
-    <div className={`p-4 flex flex-col items-center`}>
-      <div className="self-start text-[4vmin]">Best Blogs</div>
-      <img className="h-[30vmin] rounded-3xl" src="src\components\chk.png" alt="" />
-      
-      <p className="">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, praesentium beatae, qui error quasi doloribus perspiciatis dolores maxime soluta sint nulla ullam aliquam commodi reiciendis minus labore quae! Modi, inventore?
-      </p>
+    <div className={`p-4 flex flex-col items-center border-4 border-blue-700 mx-2 rounded-lg md:w-[60vw] h-[60vh] w-full`}>
+      <img className="sm:h-[30vh]" src={imgUrl} alt="" />
+      <div className=" sm:text-[2.25vmin] my-4 text-[3.25vmin]">{content}</div>
+      <div className="self-start sm:text-[2.25vmin] text-[3.25vmin]">
+        <div className="text-red-500 font-bold">Tech Stack:</div>
+        <div>{techStack}</div>
+        
+      </div>
+      <div className="mt-1">
+      <a href={gitURL} target="_blank" rel="noreferrer" ><button className="mr-[1.5vw]"><FontAwesomeIcon icon={faGithub} size="2xl" /></button></a>
+      <a href={link} target="_blank" rel="noreferrer" ><button className="mr-[1.5vw]"><FontAwesomeIcon icon={faLink} size="2xl" /></button></a>
+      </div>
     </div>
   )
 }
-
+ProjectContaner.propTypes = {
+  imgUrl:PropTypes.string,
+  techStack:PropTypes.string,
+  content:PropTypes.string,
+  link:PropTypes.string,
+  gitURL:PropTypes.string,
+  
+}
 export default ProjectContaner

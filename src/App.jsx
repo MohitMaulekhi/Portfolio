@@ -11,7 +11,7 @@ function App() {
       <Navbar/>
       <Outlet/>
       
-      <button className="h-[10vmin] w-[10vmin] bg-white absolute bottom-5 right-5 rounded-full border-black border-2 bg-cover z-50" onClick={()=>{setTheme((prev)=>prev=="light"?"dark":"light")}}
+      <button className="h-[10vmin] w-[10vmin] fixed bg-white  bottom-5 right-5 rounded-full border-black border-2 bg-cover z-50" onClick={()=>{setTheme((prev)=>prev=="light"?"dark":"light")}}
       style={{backgroundImage:`url(${theme=='light'?'https://res.cloudinary.com/mohit-learning-backend/image/upload/v1709138076/Assests%20for%20Porfolio/Themes%20icon/nfomyjjeu8u6ggb6hijm.png':"https://res.cloudinary.com/mohit-learning-backend/image/upload/v1709138079/Assests%20for%20Porfolio/Themes%20icon/n99f4tobfkjfsficetke.png"})`}}>
       </button>
     </div>

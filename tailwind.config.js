@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       backgroundColor: {
-        'Dark-Bg': '#000319',
+        'Dark-Bg': '#0c0c1d',
+        'ProjectBg': '#6140ef',
       },
   },
   plugins: [],
