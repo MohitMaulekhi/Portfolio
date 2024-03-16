@@ -8,7 +8,6 @@ function About() {
     <Container element={
       
       <div className="py-[5vh] mx-[2vw] flex justify-evenly mt-[5vh]  w-[100vw]">
-        <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
         <div className="">
           <div className="text-[5vmin] font-extrabold  mb-[5vh]" style={{fontFamily:'Blinker'}}>About me...</div>
           <div className="self-center text-[3.5vmin] italic w-[30vw] max-w-72 bg-slate-400 p-4 bg-opacity-35 rounded-3xl">

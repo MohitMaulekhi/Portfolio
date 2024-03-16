@@ -7,6 +7,7 @@ function App() {
   const [theme,setTheme] = useState("dark")
   return (
     <ThemeContext.Provider value={theme}>
+    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"/>
     <div className={`flex flex-col ${theme == "dark"? "bg-Dark-Bg":"bg-white"} min-h-[100vh] h-max`}>
       <Navbar/>
       <Outlet/>

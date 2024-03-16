@@ -1,6 +1,7 @@
 import { Container } from "../components/index.js"
-import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer"
+import { BlobProvider, PDFViewer } from "@react-pdf/renderer"
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
+import { BrowserView, MobileView } from 'react-device-detect';
 
 // Create styles
 const styles = StyleSheet.create({
@@ -36,23 +37,23 @@ const styles = StyleSheet.create({
   padding: {
     paddingHorizontal: 5
   },
-  projectHeading:{
-    textDecoration:'underline',
-    fontSize:16,
-    fontWeight:'semibold'
+  projectHeading: {
+    textDecoration: 'underline',
+    fontSize: 16,
+    fontWeight: 'semibold'
   },
-  project:{
-    padding:8
+  project: {
+    padding: 8
   },
-  projectText:{
-    marginVertical:4
+  projectText: {
+    marginVertical: 4
   }
 });
 
 // Create Document Component
 const MyDocument = () => (
-  <Document  title="Resume.pdf" author="Mohit Maulekhi"  style={styles.Document}>
-    <Page  size="A4" style={styles.page}>
+  <Document title="Resume.pdf" author="Mohit Maulekhi" style={styles.Document}>
+    <Page size="A4" style={styles.page}>
       <View>
         <View style={styles.head}>
           <View><Text style={styles.name}>Mohit Maulekhi</Text></View>
@@ -77,28 +78,28 @@ const MyDocument = () => (
         <View><Text style={styles.bolder} >SKILLS</Text></View>
         <View style={styles.line} />
         <View style={styles.padding}>
-            <Text>1. HTML</Text>
-            <Text>2. CSS</Text>
-            <Text>3. Javascript</Text>
-            <Text>4. React</Text>
-            <Text>5. Express</Text>
-            <Text>6. MongoDB</Text>
-            <Text>7. MySql</Text>
-            <Text>8. Core C++, Advance C++</Text>
-            <Text>9. Basics of Python</Text>
-            <Text>10. Data Structures and Algorithms</Text>
-            <Text>11. LateX</Text>
-            <Text>12. OOPs</Text>
+          <Text>1. HTML</Text>
+          <Text>2. CSS</Text>
+          <Text>3. Javascript</Text>
+          <Text>4. React</Text>
+          <Text>5. Express</Text>
+          <Text>6. MongoDB</Text>
+          <Text>7. MySql</Text>
+          <Text>8. Core C++, Advance C++</Text>
+          <Text>9. Basics of Python</Text>
+          <Text>10. Data Structures and Algorithms</Text>
+          <Text>11. LateX</Text>
+          <Text>12. OOPs</Text>
         </View>
         <View style={styles.line} />
         <View><Text style={styles.bolder} >PROJECTS</Text></View>
         <View style={styles.line} />
         <View><Text style={styles.projectHeading}>Best Blogs</Text></View>
         <View style={styles.project}>
-            <Text style={styles.projectText}>Description: The &apos;Best Blogs&lsquo; project is modern social meadia webiste which allow user to post their daily blogs along with image using different kind of fonts, styles and many other options. The site allow user to perform all the user and blogs related CRUD operations. A person can see others blogs in gkobal section. The webiste is fully responsive and work on any device width.</Text>
-            <Text style={styles.projectText}>
-              Tech Stack: Reactjs, CSS, HTML, Tailwind CSS, Cloudinary, Express, MongoDb, Mongoose, Axios, Bcrypt, Jsonwebtoken, Multer
-            </Text>
+          <Text style={styles.projectText}>Description: The &apos;Best Blogs&lsquo; project is modern social meadia webiste which allow user to post their daily blogs along with image using different kind of fonts, styles and many other options. The site allow user to perform all the user and blogs related CRUD operations. A person can see others blogs in gkobal section. The webiste is fully responsive and work on any device width.</Text>
+          <Text style={styles.projectText}>
+            Tech Stack: Reactjs, CSS, HTML, Tailwind CSS, Cloudinary, Express, MongoDb, Mongoose, Axios, Bcrypt, Jsonwebtoken, Multer
+          </Text>
         </View>
       </View>
     </Page>
@@ -107,11 +108,21 @@ const MyDocument = () => (
 function Resume() {
   return (
     <Container element={
-      <PDFDownloadLink document={<MyDocument />} fileName="Resume">
-        <PDFViewer className="h-[90vh] w-[95vw]">
-          <MyDocument />
-        </PDFViewer>
-      </PDFDownloadLink>
+      <>
+        <BrowserView>
+          <PDFViewer className="h-[90vh] w-[95vw]">
+            <MyDocument />
+          </PDFViewer>
+        </BrowserView>
+        <MobileView>
+          <BlobProvider document={<MyDocument/>} filename='Resume.pdf'>
+          {({ blob, url, loading, error }) =>{
+            return <button className="bg-blue-600 text-white p-2 text-center mt-[30vh]"><a href={url}>Download</a></button>
+          }}
+          </BlobProvider>
+        </MobileView>
+      </>
+
     }
       properties='items-center justify-center' />
   )
