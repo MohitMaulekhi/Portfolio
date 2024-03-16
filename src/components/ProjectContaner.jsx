@@ -7,11 +7,13 @@ function ProjectContaner({imgUrl,content,techStack,gitURL,link}) {
     <div className={`p-4 flex flex-col items-center border-4 border-blue-700 mx-2 rounded-lg md:w-[60vw] h-[60vh] w-full`}>
       <img className="sm:h-[30vh]" src={imgUrl} alt="" />
       <div className=" sm:text-[2.25vmin] my-4 text-[3.25vmin]">{content}</div>
-      <div className="self-start sm:text-[2.25vmin] text-[3.25vmin]">
-        <div className="text-red-500 font-bold">Tech Stack:</div>
-        <div>{techStack}</div>
+      <table className="self-start sm:text-[2.25vmin] text-[3.25vmin]">
+        <tr>
+        <td className="text-red-500 font-bold">Tech Stack:</td>
+        <td>{techStack}</td>
+        </tr>
         
-      </div>
+      </table>
       <div className="mt-1">
       <a href={gitURL} target="_blank" rel="noreferrer" ><button className="mr-[1.5vw]"><FontAwesomeIcon icon={faGithub} size="2xl" /></button></a>
       <a href={link} target="_blank" rel="noreferrer" ><button className="mr-[1.5vw]"><FontAwesomeIcon icon={faLink} size="2xl" /></button></a>
