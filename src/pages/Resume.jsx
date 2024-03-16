@@ -1,5 +1,5 @@
 import { Container } from "../components/index.js"
-import { PDFViewer } from "@react-pdf/renderer"
+import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer"
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 
 // Create styles
@@ -51,8 +51,8 @@ const styles = StyleSheet.create({
 
 // Create Document Component
 const MyDocument = () => (
-  <Document title="Resume.pdf" author="Mohit Maulekhi" style={styles.Document}>
-    <Page size="A4" style={styles.page}>
+  <Document  title="Resume.pdf" author="Mohit Maulekhi"  style={styles.Document}>
+    <Page  size="A4" style={styles.page}>
       <View>
         <View style={styles.head}>
           <View><Text style={styles.name}>Mohit Maulekhi</Text></View>
@@ -107,9 +107,11 @@ const MyDocument = () => (
 function Resume() {
   return (
     <Container element={
-      <PDFViewer className="h-[90vh] w-[95vw]">
-        <MyDocument />
-      </PDFViewer>
+      <PDFDownloadLink document={<MyDocument />} fileName="Resume">
+        <PDFViewer className="h-[90vh] w-[95vw]">
+          <MyDocument />
+        </PDFViewer>
+      </PDFDownloadLink>
     }
       properties='items-center justify-center' />
   )
