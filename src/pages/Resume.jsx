@@ -57,7 +57,7 @@ const MyDocument = () => (
         <View style={styles.head}>
           <View><Text style={styles.name}>Mohit Maulekhi</Text></View>
           <View><Text style={styles.centerText}>Ghaziabad, Uttar Pradesh | Ph no.:+917827838523 | mohitmaulekhi312@gmail.com</Text></View>
-          <View><Text style={styles.centerText}>LinkedIn:https://www.linkedin.com/in/mohit-maulekhi-222395267/, GitHub:https://github.com/MohitMaulekhi</Text></View>
+          <View><Text>LinkedIn:https://www.linkedin.com/in/mohit-maulekhi-222395267/, GitHub:https://github.com/MohitMaulekhi</Text></View>
         </View>
         <View style={styles.line} />
         <View><Text style={styles.bolder} >OBJECTIVE</Text></View>
