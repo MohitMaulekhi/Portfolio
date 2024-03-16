@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {PropTypes} from 'prop-types'
 function ProjectContaner({imgUrl,content,techStack,gitURL,link,title}) {
   return (
-    <div className={`p-4 flex flex-col items-center border-4 border-blue-700 mx-2 rounded-lg  w-full lg:w-[60vw]`}>
-      <img className="sm:h-[30vh] p-4" src={imgUrl} alt="image not found" />
+    <div className={`p-4 flex flex-col items-center border-4 border-blue-700 mx-2 rounded-lg w-full lg:w-[60vw]`}>
+      <img className="sm:h-[30vh] p-2" src={imgUrl} alt="image not found" />
       <center className="my-2 text-2xl">{title}</center>
-      <div className=" sm:text-[2.25vmin] my-4 text-[3.25vmin]">{content}</div>
+      <div className=" sm:text-[2.25vmin] my-2 text-[3.25vmin]">{content}</div>
       <table className="self-start sm:text-[2.25vmin] text-[3.25vmin]">
         <tr>
         <td className="text-red-500 font-bold">Tech Stack:</td>

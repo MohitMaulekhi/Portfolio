@@ -17,8 +17,9 @@ const projectArr = [
     link:'https://bestblogs.onrender.com/'
   },
   {
-    imgUrl:"",
+    imgUrl:"https://res.cloudinary.com/mohit-learning-backend/image/upload/v1710603711/Assests%20for%20Porfolio/Project%20Assets/n1obrgwjty0xon2eywyi.jpg",
     content:'Many more to come....',
+    title:'',
     techStack:'none',
     gitURL:'',
     link:''

@@ -116,7 +116,7 @@ function Resume() {
         </BrowserView>
         <MobileView>
           <BlobProvider document={<MyDocument/>} filename='Resume.pdf'>
-          {({ blob, url, loading, error }) =>{
+          {({url}) =>{
             return <button className="bg-blue-600 text-white p-2 text-center mt-[30vh]"><a href={url}>Download</a></button>
           }}
           </BlobProvider>
