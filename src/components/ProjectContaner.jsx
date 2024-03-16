@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {PropTypes} from 'prop-types'
 function ProjectContaner({imgUrl,content,techStack,gitURL,link}) {
   return (
-    <div className={`p-4 flex flex-col items-center border-4 border-blue-700 mx-2 rounded-lg md:w-[60vw] h-[60vh] w-full`}>
+    <div className={`p-4 flex flex-col items-center border-4 border-blue-700 mx-2 rounded-lg h-[60vh] w-fit md:w-[60vw]`}>
       <img className="sm:h-[30vh]" src={imgUrl} alt="" />
       <div className=" sm:text-[2.25vmin] my-4 text-[3.25vmin]">{content}</div>
       <table className="self-start sm:text-[2.25vmin] text-[3.25vmin]">
