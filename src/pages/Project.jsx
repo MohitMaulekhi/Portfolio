@@ -12,7 +12,7 @@ const projectArr = [
     imgUrl:"https://res.cloudinary.com/mohit-learning-backend/image/upload/v1710510164/Assests%20for%20Porfolio/Project%20Assets/bt8z0grgl4zqv0ftsem2.png",
     title:'Best Blogs',
     content:'The YouTube clone, developed using React and the YouTube API, recreates the functionality of the original video-sharing platform. By integrating the YouTube API, the clone can access real-time videos and perform searches.',
-    techStack:'React JS, Chakra UI, Redux Toolkit, Youtube Api, Javascript, CSS',
+    techStack:'Reactjs, CSS, HTML, Tailwind CSS, Cloudinary, Express, MongoDb, Mongoose, Axios, Bcrypt, Jsonwebtoken, Multer',
     gitURL:'https://github.com/MohitMaulekhi/MERN-Blog-Project',
     link:'https://bestblogs.onrender.com/'
   },
@@ -43,7 +43,7 @@ function Project() {
         navigation={true}
         modules={[Parallax, Pagination, Navigation]}
         
-        className="mySwiper h-[70vh] mt-[7.5vh] w-[100vw] rounded-3xl mx-2"
+        className="mySwiper h-[75vh] mt-[7.5vh] w-[100vw] rounded-3xl mx-2"
       >
         {projectArr.map((item,index)=>(
           <SwiperSlide key={index} className="flex justify-center items-center">

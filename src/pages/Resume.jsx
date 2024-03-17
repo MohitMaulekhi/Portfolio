@@ -65,7 +65,7 @@ const MyDocument = () => (
         <View style={styles.line} />
 
         <View>
-          <Text>Highly motivated and skilled BTech student seeking an Internship or Job opportunity to apply and enhance my knowledge in computer applications and softwaredevelopment . Eager to work with a dynamic team, contribute to real worldprojects,and develop practical experience in the industry. Hardworking and Passionate Jobseeker with strong organizational skills.</Text>
+          <Text style={[{paddingRight:8}]}>Highly motivated and skilled BTech student seeking an Internship or Job opportunity to apply and enhance my knowledge in computer applications and software development . Eager to work with a dynamic team, contribute to real world projects, and develop practical experience in the industry. Hardworking and Passionate Jobseeker with strong organizational skills.</Text>
         </View>
         <View style={styles.line} />
         <View><Text style={styles.bolder} >EDUCATION</Text></View>
@@ -96,7 +96,7 @@ const MyDocument = () => (
         <View style={styles.line} />
         <View><Text style={styles.projectHeading}>Best Blogs</Text></View>
         <View style={styles.project}>
-          <Text style={styles.projectText}>Description: The &apos;Best Blogs&lsquo; project is modern social meadia webiste which allow user to post their daily blogs along with image using different kind of fonts, styles and many other options. The site allow user to perform all the user and blogs related CRUD operations. A person can see others blogs in gkobal section. The webiste is fully responsive and work on any device width.</Text>
+          <Text style={styles.projectText}>Description: The &apos;Best Blogs&lsquo; project is modern social meadia webiste which allow user to post their daily blogs along with a image using different kind of fonts, styles and many other options. The site allow user to perform all the user and blogs related CRUD operations. A person can see others blogs in global section. The webiste is fully responsive and works on any device width.</Text>
           <Text style={styles.projectText}>
             Tech Stack: Reactjs, CSS, HTML, Tailwind CSS, Cloudinary, Express, MongoDb, Mongoose, Axios, Bcrypt, Jsonwebtoken, Multer
           </Text>
@@ -110,7 +110,7 @@ function Resume() {
     <Container element={
       <>
         <BrowserView>
-          <PDFViewer className="h-[90vh] w-[95vw]">
+          <PDFViewer className="h-[90vh] w-[90vw]">
             <MyDocument />
           </PDFViewer>
         </BrowserView>

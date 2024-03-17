@@ -42,7 +42,7 @@ function Home() {
   return (
     <Container element = {
       <>
-      <div className="h-[40vmin] mt-[15vh] w-[40vmin] rounded-full bg-cover" style={{backgroundImage:"url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSBWDHXtjeMDRl3z5YaKUq2DDvEvDTtpYWCetNU006z9NzYXlH8)"}}></div>
+      <div className="h-[40vmin] mt-[15vh] w-[40vmin] rounded-full bg-cover" style={{backgroundImage:"url(https://res.cloudinary.com/mohit-learning-backend/image/upload/v1710676991/Assests%20for%20Porfolio/mh3gmsf0lwqsjegopfuh.png)"}}></div>
       <div className="text-blue-800 font-bold text-[5vmin]  mt-[3vh]">{maintxt}</div>
       </>
     }
