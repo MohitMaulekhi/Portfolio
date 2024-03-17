@@ -65,7 +65,7 @@ const MyDocument = () => (
         <View style={styles.line} />
 
         <View>
-          <Text style={[{paddingRight:8}]}>Highly motivated and skilled BTech student seeking an Internship or Job opportunity to apply and enhance my knowledge in computer applications and software development . Eager to work with a dynamic team, contribute to real world projects, and develop practical experience in the industry. Hardworking and Passionate Jobseeker with strong organizational skills.</Text>
+          <Text style={[{ paddingRight: 8 }]}>A highly motivated and skilled BTech student seeking an internship or job opportunity to apply and enhance my knowledge in computer applications and software development. I am eager to collaborate with a dynamic team, contribute to real-world projects, and gain practical experience in the industry. I am a hardworking and passionate job seeker with strong organizational skills.</Text>
         </View>
         <View style={styles.line} />
         <View><Text style={styles.bolder} >EDUCATION</Text></View>
@@ -78,27 +78,19 @@ const MyDocument = () => (
         <View><Text style={styles.bolder} >SKILLS</Text></View>
         <View style={styles.line} />
         <View style={styles.padding}>
-          <Text>1. HTML</Text>
-          <Text>2. CSS</Text>
-          <Text>3. Javascript</Text>
-          <Text>4. React</Text>
-          <Text>5. Express</Text>
-          <Text>6. MongoDB</Text>
-          <Text>7. MySql</Text>
-          <Text>8. Core C++, Advance C++</Text>
-          <Text>9. Basics of Python</Text>
-          <Text>10. Data Structures and Algorithms</Text>
-          <Text>11. LateX</Text>
-          <Text>12. OOPs</Text>
+          <Text style={[{ marginVertical: 3 }]}>1. Programming Languages: HTML, CSS, JavaScript, React, Express, Core C++, Advanced C++, Python (Basics)</Text>
+          <Text style={[{ marginVertical: 3 }]}>2. Databases: MongoDB, MySQL</Text>
+          <Text style={[{ marginVertical: 3 }]}>3. Other Skills: Data Structures and Algorithms, LaTeX, Object-Oriented Programming (OOPs)</Text>
         </View>
         <View style={styles.line} />
         <View><Text style={styles.bolder} >PROJECTS</Text></View>
         <View style={styles.line} />
         <View><Text style={styles.projectHeading}>Best Blogs</Text></View>
         <View style={styles.project}>
-          <Text style={styles.projectText}>Description: The &apos;Best Blogs&lsquo; project is modern social meadia webiste which allow user to post their daily blogs along with a image using different kind of fonts, styles and many other options. The site allow user to perform all the user and blogs related CRUD operations. A person can see others blogs in global section. The webiste is fully responsive and works on any device width.</Text>
+          <Text style={styles.projectText}>Description: Developed a modern social media website for users to post daily blogs with images, utilizing various font styles and options. Implemented CRUD operations for user and blog management. Ensured full responsiveness across devices for seamless user experience.
+          </Text>
           <Text style={styles.projectText}>
-            Tech Stack: Reactjs, CSS, HTML, Tailwind CSS, Cloudinary, Express, MongoDb, Mongoose, Axios, Bcrypt, Jsonwebtoken, Multer
+            Tech Stack: Reactjs, CSS, HTML, Tailwind CSS, Cloudinary, Express, MongoDb, Mongoose, Axios, Bcrypt, Jsonwebtoken, Multer, Tiny-mce
           </Text>
         </View>
       </View>
@@ -115,10 +107,10 @@ function Resume() {
           </PDFViewer>
         </BrowserView>
         <MobileView>
-          <BlobProvider document={<MyDocument/>} filename='Resume.pdf'>
-          {({url}) =>{
-            return <button className="bg-blue-600 text-white p-2 text-center mt-[30vh]"><a href={url}>Download</a></button>
-          }}
+          <BlobProvider document={<MyDocument />} filename='Resume.pdf'>
+            {({ url }) => {
+              return <button className="bg-blue-600 text-white p-2 text-center mt-[30vh]"><a href={url}>Download</a></button>
+            }}
           </BlobProvider>
         </MobileView>
       </>

@@ -11,8 +11,8 @@ const projectArr = [
   {
     imgUrl:"https://res.cloudinary.com/mohit-learning-backend/image/upload/v1710510164/Assests%20for%20Porfolio/Project%20Assets/bt8z0grgl4zqv0ftsem2.png",
     title:'Best Blogs',
-    content:'The YouTube clone, developed using React and the YouTube API, recreates the functionality of the original video-sharing platform. By integrating the YouTube API, the clone can access real-time videos and perform searches.',
-    techStack:'Reactjs, CSS, HTML, Tailwind CSS, Cloudinary, Express, MongoDb, Mongoose, Axios, Bcrypt, Jsonwebtoken, Multer',
+    content:'Developed a modern social media website for users to post daily blogs with images, utilizing various font styles and options. Implemented CRUD operations for user and blog management. Ensured full responsiveness across devices for seamless user experience.',
+    techStack:'Reactjs, CSS, HTML, Tailwind CSS, Cloudinary, Express, MongoDb, Mongoose, Axios, Bcrypt, Jsonwebtoken, Multer, Tiny-mce',
     gitURL:'https://github.com/MohitMaulekhi/MERN-Blog-Project',
     link:'https://bestblogs.onrender.com/'
   },

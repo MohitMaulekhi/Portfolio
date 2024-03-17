@@ -42,10 +42,11 @@ function Contact() {
             }}
             validationSchema={contactFormSchema}
             onSubmit={async (values, action) => {
+              action.resetForm()
               await axios.post(`/api/v1/contact`, values,{withCredentials:true})
               .then(toast.success("Message sent"))
               .catch((errors)=>{console.log(errors)})
-              action.resetForm()
+              
             }}
           >
             {({
