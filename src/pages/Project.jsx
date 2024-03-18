@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 
 const projectArr = [
   {
-    imgUrl:"https://res.cloudinary.com/mohit-learning-backend/image/upload/v1710510164/Assests%20for%20Porfolio/Project%20Assets/bt8z0grgl4zqv0ftsem2.png",
+    imgUrl:"https://res.cloudinary.com/mohit-learning-backend/image/upload/v1710772615/Assests%20for%20Porfolio/Project%20Assets/voo4m0lxgxczxbrwf33g.png",
     title:'Best Blogs',
     content:'Developed a modern social media website for users to post daily blogs with images, utilizing various font styles and options. Implemented CRUD operations for user and blog management. Ensured full responsiveness across devices for seamless user experience.',
     techStack:'Reactjs, CSS, HTML, Tailwind CSS, Cloudinary, Express, MongoDb, Mongoose, Axios, Bcrypt, Jsonwebtoken, Multer, Tiny-mce',
